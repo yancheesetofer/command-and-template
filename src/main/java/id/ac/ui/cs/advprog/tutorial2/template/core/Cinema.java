@@ -12,7 +12,16 @@ public abstract class Cinema {
     public List<String> letTheShowBegin() {
         List<String> list = new ArrayList<>();
         // TODO: Complete me
-        
+        list.add(turnOnLight());
+        list.add(turnOffLight());
+        list.add(turnOnAC());
+        list.add(turnOffAC());
+        list.add(turnOnSoundSystem());
+        list.add(turnOffSoundSystem());
+        list.add(turnOnScreen());
+        list.add(turnOffScreen());
+        list.add(playAds());
+        list.add(playMovie());
         return list;
     }
 

@@ -16,8 +16,7 @@ public class LampOnCommand implements Command {
 
     @Override
     public String execute() {
-        // TODO: implementasikan method berikut
-        return null;
+        return this.lamp.on();
     }
 
     @Override

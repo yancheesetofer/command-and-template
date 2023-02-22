@@ -56,20 +56,29 @@ public class CinemaAdminServiceImpl implements CinemaAdminService {
     }
 
     public void registryACCommand(AC ac) {
-        // TODO : implementasikan method berikut
+        cinemaPanel.addCommand(new ACHighCommand(ac));
+        cinemaPanel.addCommand(new ACMediumCommand(ac));
+        cinemaPanel.addCommand(new ACLowCommand(ac));
+        cinemaPanel.addCommand(new ACOffCommand(ac));
     }
 
     public void registryLampCommand(Lamp lamp) {
         // TODO : implementasikan method berikut
+        cinemaPanel.addCommand(new LampOnCommand(lamp));
+        cinemaPanel.addCommand(new LampOffCommand(lamp));
     }
 
     public void registryScreenCommand(Screen screen) {
         // TODO : implementasikan method berikut
+        cinemaPanel.addCommand(new ScreenFilmCommand(screen));
+        cinemaPanel.addCommand(new ScreenAdsCommand(screen));
+        cinemaPanel.addCommand(new ScreenOffCommand(screen));
     }
 
     @Override
     public void executeCommand(String command) {
         // TODO : eksekusi command diatas
+        cinemaPanel.execute(command);
     }
 
     @Override

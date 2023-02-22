@@ -11,11 +11,16 @@ public class CinemaPanel {
     private List<String> commandHistory = new ArrayList<>();
 
     public void execute(String commandName) {
-        // TODO : implementasikan method berikut
+        Command command = commands.get(commandName);
+        if (command != null) {
+            String result = command.execute();
+            commandHistory.add(result);
+            System.out.println(result);
+        }
     }
 
     public void addCommand(Command command) {
-        // TODO : implementasikan method berikut
+        commands.put(command.getCommandName(), command);
     }
 
     public void clearCommand() {
